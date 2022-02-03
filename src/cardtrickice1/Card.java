@@ -12,8 +12,8 @@ package cardtrickice1;
  */
 public class Card 
 {
-    private int value;
-    private String suits; //encapsulation
+    private int value;  //1-13
+    private String suits; //encapsulation   // diamonds
     //constant
     public static final String [] SUITS = { "diamonds","clubs","spades","hearts"};
 
@@ -28,6 +28,7 @@ public class Card
      * @param value the value to set
      */
     public void setValue(int value) {
+        // value = (int)(Math.random()*13) + 1;
         this.value = value;
     }
 
@@ -42,10 +43,18 @@ public class Card
      * @param suits the suits to set
      */
     public void setSuits(String suits) {
+        //int name = (int)(Math.random()*4) ;
+        //suits = SUITS[name];
+        //this.suits = suits;
         this.suits = suits;
     }
    //number
     
     //method for suits
+    
+     public String toString()
+    {
+        return "" + getValue() + "  of  " + getSuits();
+    }
     
 }
